@@ -5,6 +5,11 @@ import https from 'https';
 //       dest: { host: "", port: "", path: "", data: {...} }
 let queue: any[] = [];
 
+export function testResponse(request: { body: any; }, response: { send: (arg0: string) => void; })
+{
+  response.send("[innerconnect.testResponse] Test Connection Worked.");
+}
+
 export function addData(request: { body: any; }, response: { send: (arg0: string) => void; })
 {
   let body = request.body;

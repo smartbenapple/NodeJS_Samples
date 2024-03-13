@@ -1,10 +1,10 @@
 import express from 'express';
-import { addData } from "./innerconnect.js";
+import { addData, testResponse } from "./innerconnect.js";
 
 const app = express();
 app.use(express.json());
 
-//app.get('/sendme', getAllAction);
+app.get('/sendme', testResponse);
 app.post('/sendme', addData);
 
 // was: port 8282

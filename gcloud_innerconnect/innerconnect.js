@@ -2,6 +2,9 @@ import https from 'https';
 // Idea: holds {} object => { destSrv: "MovieSrv", data:{...} }
 //       dest: { host: "", port: "", path: "", data: {...} }
 let queue = [];
+export function testResponse(request, response) {
+    response.send("[innerconnect.testResponse] Test Connection Worked.");
+}
 export function addData(request, response) {
     let body = request.body;
     console.log('[innerconnect.addData] Start = ' + body.toString());
