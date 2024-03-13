@@ -1,6 +1,6 @@
 movie:
     build:
-      context: movie
+      context: models
     depends_on:
       - 'mysql'
     restart: on-failure

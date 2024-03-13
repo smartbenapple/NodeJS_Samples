@@ -5,4 +5,4 @@ RUN npm install
 RUN npm install amqplib axios express express-jwt jsonwebtoken request uuid
 COPY . .
 EXPOSE 8080
-CMD ["node", "./api/index.js"]
+CMD ["node", "index.js"]
