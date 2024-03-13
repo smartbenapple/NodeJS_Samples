@@ -6,7 +6,7 @@
 # https://stackoverflow.com/questions/40717449/how-to-change-angular-port-from-4200-to-any-other
 
 #FROM node:16.8.0
-FROM node:alpine
+FROM node:18.13.0
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN echo "Installing Angular CLI..."
@@ -15,4 +15,4 @@ RUN echo "Installing NPM..."
 RUN npm install
 COPY . .
 EXPOSE 8080
-#CMD ["node", "index.js"]
+CMD ["ng", "serve --port 8080"]
