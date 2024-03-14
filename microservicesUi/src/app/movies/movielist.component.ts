@@ -10,12 +10,28 @@ export class MovieListComponent
 {
   title = 'My Movie List';
 
-  // Movies Array
+  // Movies
   movies = [{"title":"Bambi", "year":"1965"},{"title":"Iron Man", "year":"2008"}];
+
+  // Messages
+  messages = [""];
 
   constructor()
   {
     const cMovie = new MovieClass();
-    this.movies = cMovie.movies;
+    // @ts-ignore
+    const moviesArray :[{title:string, year:string}] = cMovie.movies;
+    for (let index in moviesArray)
+    {
+        let movie = moviesArray[index];
+        this.pushMessage(movie.title);
+    }
+
+    this.movies = moviesArray;
+  }
+
+  pushMessage(message:string)
+  {
+    this.messages.push(message);
   }
 }

@@ -16,15 +16,15 @@ export class MovieClass
   {
     this.movies = [{ "title": "Mary Poppins", "year": "1956" }, { "title": "Dumbo", "year": "1967" }];
 
-    this.getAll().then(items =>
+    /*this.getAll().then(items =>
     {
       console.log("GetAll Called.");
       this.logMessage = "GetAll Called.";
 
       this.movies = [{ "title": "Iron Man", "year": "2008" }, { "title": "Troy", "year": "2009" }];
-    });
+    });*/
   }
-  async getAll()
+  getAll() :[{title:string, year:string}]
   {
     return [{"title":"testing", "year":"2024"}];
   }
