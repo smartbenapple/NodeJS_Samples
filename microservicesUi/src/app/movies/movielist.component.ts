@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieClass } from './Movies';
+import { Events } from '../events/EventEmitter';
 
 @Component({
   selector: 'app-movies',
@@ -21,6 +22,7 @@ export class MovieListComponent
     const cMovie = new MovieClass();
     // @ts-ignore
     const moviesArray :[{title:string, year:string}] = cMovie.movies;
+    // for() index value is not the direct array item -> https://www.microverse.org/blog/how-to-loop-through-the-array-of-json-objects-in-javascript
     for (let index in moviesArray)
     {
         let movie = moviesArray[index];
@@ -28,6 +30,30 @@ export class MovieListComponent
     }
 
     this.movies = moviesArray;
+
+    // Tie to EventEmitter
+    //cMovie.EventGetAllCompleted.on(cMovie.EventName, this.handleEventTest);
+
+    // todo: testing event.
+    this.testEventsHere();
+  }
+
+  testEventsHere()
+  {
+    const functionCallback = () => this.handleEventTest();
+
+    // todo: test custom version
+    const events = new Events();
+    events.on("MyEvent", functionCallback);
+    setTimeout(() => {
+      this.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
+      events.emit("MyEvent");
+    }, 2500);
+  }
+
+  handleEventTest()
+  {
+    this.pushMessage("Event Handled.");
   }
 
   pushMessage(message:string)
