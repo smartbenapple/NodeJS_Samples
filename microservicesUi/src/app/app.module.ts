@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MovieListComponent } from "./movies/movielist.component";
+import { BootContainer3ClmsComponent } from "./Bootstrap/bCont3Clms";
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MovieListComponent } from "./movies/movielist.component";
   ],
   declarations: [
     AppComponent,
-    MovieListComponent
+    MovieListComponent,
+    BootContainer3ClmsComponent,
   ],
   bootstrap: [
     AppComponent

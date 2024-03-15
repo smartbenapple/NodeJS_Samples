@@ -1,10 +1,9 @@
 <div>
   <h5>My Movies Component</h5>
-  <div *ngFor="let movie of movies" >
-    <h4> {{ movie.title }} </h4>
-  </div>
+  <boot-cont3clms [pArray]="movies"></boot-cont3clms>
   <br/>
   <div *ngFor="let message of messages" >
     <h6> {{ message }} </h6>
   </div>
+  <button type="button" class="btn btn-info">Primary</button>
 </div>
