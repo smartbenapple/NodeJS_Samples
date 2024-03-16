@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Manually Install Angular Bootstrap
+
+- npm install bootstrap
+- angular.json configuration: "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css"]
+- ng add @angular/localize
+- npm install @popperjs/core
+- npm install @ng-bootstrap/ng-bootstrap
+  Once installed you can import our main module, and you're good to go
+
+https://ng-bootstrap.github.io/#/getting-started
+Example Class:
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+@NgModule({ imports: [NgbModule], })
+export class YourAppModule { }

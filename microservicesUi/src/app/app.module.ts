@@ -5,20 +5,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MovieListComponent } from "./movies/movielist.component";
-import { BootContainer3ClmsComponent } from "./Bootstrap/bCont3Clms";
+import { BootContainer3ClmsComponent } from "./Bootstrap/bCont3Clms/bCont3Clms";
+import { BootContainerClmPartsComponent } from "./Bootstrap/bContClmParts/bContClmParts";
+import { NgbdPopoverBasic } from "./Bootstrap/popovers/popover-basic";
+import { NgbdProgressbarBasic } from "./Bootstrap/progressbar/progressbar-basic";
+import { NgbdOffcanvasBottom } from "./Bootstrap/offCanvas/offcanvas-bottom";
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: MovieListComponent },
-    ])
+      {path: '', component: MovieListComponent},
+    ]),
+    NgbdPopoverBasic,
+    NgbdProgressbarBasic,
+    NgbdOffcanvasBottom
   ],
   declarations: [
     AppComponent,
     MovieListComponent,
     BootContainer3ClmsComponent,
+    BootContainerClmPartsComponent,
   ],
   bootstrap: [
     AppComponent
