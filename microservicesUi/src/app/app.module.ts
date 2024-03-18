@@ -4,27 +4,33 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { MovieListComponent } from "./movies/movielist.component";
+import { MovieListComponent } from "./movies/List/movielist.component";
 import { BootContainer3ClmsComponent } from "./Bootstrap/bCont3Clms/bCont3Clms";
 import { BootContainerClmPartsComponent } from "./Bootstrap/bContClmParts/bContClmParts";
 import { NgbdPopoverBasic } from "./Bootstrap/popovers/popover-basic";
 import { NgbdProgressbarBasic } from "./Bootstrap/progressbar/progressbar-basic";
 import { NgbdOffcanvasBottom } from "./Bootstrap/offCanvas/offcanvas-bottom";
+import {MovieInputComponent} from "./movies/Input/movieinput.component";
+import {NavBarComponent} from "./NavBar/navbar.component";
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: '', component: MovieListComponent},
+      { path: '', redirectTo: '/list', pathMatch: 'full' },
+      {path: 'list', component: MovieListComponent},
+      {path: 'add', component: MovieInputComponent},
     ]),
     NgbdPopoverBasic,
     NgbdProgressbarBasic,
-    NgbdOffcanvasBottom
+    NgbdOffcanvasBottom,
+    NavBarComponent
   ],
   declarations: [
     AppComponent,
     MovieListComponent,
+    MovieInputComponent,
     BootContainer3ClmsComponent,
     BootContainerClmPartsComponent,
   ],

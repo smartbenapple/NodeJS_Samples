@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MovieClass } from './Movies';
-import { Events } from '../events/EventEmitter';
+import { MovieClass } from '../Movies';
+import { Events } from '../../events/EventEmitter';
 
 @Component({
   selector: 'app-movies',
