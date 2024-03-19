@@ -1,8 +1,8 @@
-import { Injectable, InjectionToken } from '@angular/core';
+import { inject, Injectable} from '@angular/core';
 import axios from "axios";
 import { Events } from '../events/EventEmitter';
 import { getData } from "./getData";
-import { getByteLengths } from './utils'
+import { MessagesService } from "../messages/messages.service";
 
 interface IMovie
 {
@@ -16,18 +16,20 @@ const url2 = 'https://gcloud-ms-get-axxh6chama-wl.a.run.app/get';
 @Injectable({
   providedIn: 'root'
 })
-export class MovieClass
+export class MoviesService
 {
   movies = [{ "Title": "Bambi", "Year": "1956" }, { "Title": "Snow White", "Year": "1934" }];
-  logMessages:[string] = ["..."];
 
   // Success: testing event.
   // https://www.w3schools.com/nodejs/nodejs_events.asp
   EventName = "GetAllCompleted";
   EventGetAllCompleted = new Events();
 
+  // Concern: Messaging Service
+  messagesService = inject(MessagesService);
+
   // Success: Test message callback
-  _postMsgCallback: ((msg: string) => void) = () => { console.log("") };
+  //_postMsgCallback: ((msg: string) => void) = () => { console.log("") };
   // TODO: test catching error axios
   private err: ((reason: any) => PromiseLike<never>) | undefined | null;
 
@@ -40,34 +42,35 @@ export class MovieClass
     this.getAll();
   }
 
+  // TODO: Test if adds record.
   add(item: IMovie)
   {
-    this._postMsgCallback("Ui:[Movies.add] Triggered.");
+    this.messagesService.pushMessage("Ui:[Movies.add] Triggered.");
 
     let itemStg = JSON.stringify(item);
+    //let lengthStg = getByteLengths(item);
     const axiosConfig = { headers: {
         Accept: "application/json",
         'Access-Control-Allow-Origin' : '*',
         'Access-Control-Allow-Headers' : 'Origin, X-Requested-With, Content-Type, Accept',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE',
-        "Content-Type": "application/json;charset=UTF-8",
-        'Content-Length': getByteLengths(itemStg)
+        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE, OPTIONS',
+        "Content-Type": "application/json;charset=UTF-8"
       }};
 
     // todo: CORS worked for url2 test.
     axios.post(url, itemStg, axiosConfig).then( response =>
       {
-        this._postMsgCallback("Ui:[Movies.add] axios-post response." + response.data);
+        this.messagesService.pushMessage("Ui:[Movies.add] axios-post response." + response.data);
       }).catch(this.err)
     {
-      this._postMsgCallback("Ui:[Movies.add] axios-post failed!" + this.err?.toString());
+      this.messagesService.pushMessage("Ui:[Movies.add] axios-post failed!" + this.err?.toString());
     };
 
   }
 
   getAll()
   {
-    this._postMsgCallback("GetAll Triggered.");
+    this.messagesService.pushMessage("GetAll Triggered.");
 
     // Using setTimeout in Javascript: https://masteringjs.io/tutorials/node/sleep
     /*setTimeout(() => {
@@ -102,7 +105,7 @@ export class MovieClass
       //this.outputArray(this.movies);
     }).catch(this.err)
     {
-      this._postMsgCallback("Ui:[Movies.GetAll] axios-post failed!" + this.err?.toString());
+      this.messagesService.pushMessage("Ui:[Movies.GetAll] axios-post failed!" + this.err?.toString());
     };
 
     //getData();
@@ -133,11 +136,11 @@ export class MovieClass
     ).then(
       (data) => {
         console.log(data);
-        this._postMsgCallback("Fetch Called!");
+        this.messagesService.pushMessage("Fetch Called!");
       }
     ).catch((err) => {
       console.log("Unable to fetch -", err);
-      this._postMsgCallback("Fetch Failed! err" + err);
+      this.messagesService.pushMessage("Fetch Failed! err" + err);
     });
   } // end
 
@@ -147,7 +150,7 @@ export class MovieClass
     for (let index in array)
     {
       let movie = array[index];
-      this._postMsgCallback(movie.Title);
+      this.messagesService.pushMessage(movie.Title);
     }
   }
 }

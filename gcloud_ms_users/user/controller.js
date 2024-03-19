@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { create, getAll } from './model_org.js';
+import { create, getAll } from './model.js';
 import { sendData } from "./connect.js";
 // { destSrv: "MovieSrv", data:{...} }
 function createMessage(id, data) {

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MovieClass } from '../Movies';
+import { MoviesService } from '../movies.service';
 import { Events } from '../../events/EventEmitter';
 import { MessagesService } from "../../messages/messages.service";
 
@@ -20,33 +20,32 @@ export class MovieListComponent
 
   constructor()
   {
-    // todo: testing injectable class.
-    const cMovie = inject(MovieClass); //new MovieClass(this.functionCallback);
-    cMovie.logMessages.push("Set by MovieList");
+    // Success: testing injectable class.
+    const cMovie = inject(MoviesService);
 
     // @ts-ignore
     const moviesArray :[{Title:string, Year:string}] = cMovie.movies;
     this.movies = moviesArray;
 
     // Tie to EventEmitter
-    const functionCallback2 = (mv:MovieClass) => this.reloadMoviesOccurred(cMovie);
+    const functionCallback2 = (mv:MoviesService) => this.reloadMoviesOccurred(cMovie);
     cMovie.EventGetAllCompleted.on(cMovie.EventName, functionCallback2);
   }
 
   testEventsHere()
   {
-    //const functionCallback = (msg:string) => this.postMessageOccurred("Test EventHere...");
+    const functionCallback = (msg:string) => this.messageService.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
 
     // todo: test custom version
     const events = new Events();
-    events.on("MyEvent", this.messageService.pushMessage);
+    events.on("MyEvent", functionCallback);
     setTimeout(() => {
-      this.messageService.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
+      //this.messageService.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
       events.emit("MyEvent");
     }, 2500);
   }
 
-  reloadMoviesOccurred(movieClass:MovieClass)
+  reloadMoviesOccurred(movieClass:MoviesService)
   {
     this.messageService.pushMessage("Reload Movies Occurred.");
 

@@ -1,8 +1,9 @@
 // Angular-Forms: https://angular.io/start/start-forms
 //
 import { Component, inject } from '@angular/core';
-import { MovieClass } from '../Movies'
+import { MoviesService } from '../movies.service'
 import { FormBuilder } from "@angular/forms";
+import { MessagesService } from "../../messages/messages.service";
 
 @Component({
   selector: 'movie-input',
@@ -11,13 +12,9 @@ import { FormBuilder } from "@angular/forms";
 })
 export class MovieInputComponent
 {
-    //functionCallback = (msg:string) => this.postMessageOccurred(msg);
-    //cMovie = new MovieClass(this.functionCallback);
-
-    // todo: testing injectable class.
-    cMovie = inject(MovieClass);
-
-    messages = [""]; // todo: put into own class
+    // Success: testing injectable class.
+    cMovie = inject(MoviesService);
+    messagesService = inject(MessagesService);
 
     // Concern: Tracks form data from <form>
     private formBuilder: FormBuilder = inject(FormBuilder);
@@ -26,13 +23,9 @@ export class MovieInputComponent
       year: ''
     });
 
-    constructor() {
+    constructor()
+    {
       this.pushMessage("UI:[movieinput.ctr] Triggered.");
-
-      // TODO: test getting var from MovieClass
-      this.pushMessage("UI:[movieinput.ctr] LogMessage=" + this.cMovie.logMessages);
-
-      this.cMovie.logMessages.push("Set by MovieInput");
     }
 
     /*postMessageOccurred(message: string)
@@ -42,17 +35,16 @@ export class MovieInputComponent
 
     pushMessage(message:string)
     {
-      this.messages.push(message);
+      this.messagesService.pushMessage(message);
     }
 
-    clickSave(event:any)
+    clickSave()
     {
-      let movieStg = JSON.stringify({ Title: this.moviesForm.value.title, Year: this.moviesForm.value.year });
+      let movie = { Title: this.moviesForm.value.title!.toString(), Year: this.moviesForm.value.year!.toString() };
+      let movieStg = JSON.stringify(movie);
       this.pushMessage("UI:[movieinput.clickSave] Triggered. Movie=" + movieStg.toString());
 
       // todo: send test data for testing
-      this.pushMessage("UI:[movieinput.clickSave] LogMessage=" + this.cMovie.logMessages);
-      this.cMovie.add({Title:"MovieInput", Year:"2024"});
-      this.cMovie.logMessages.push("Set by Clicksave!"); //`Movie = ${this.moviesForm.value.title} ; ${this.moviesForm.value.year}`;
+      this.cMovie.add(movie);
     }
 }

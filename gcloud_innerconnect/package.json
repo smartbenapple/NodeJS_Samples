@@ -16,10 +16,12 @@
     "node": ">=11.14"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "handlebars": "^4.7.4"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "eslint": "8.54.0",
     "eslint-config-prettier": "8.10.0",
     "eslint-plugin-node": "11.1.0",

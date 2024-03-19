@@ -1,5 +1,6 @@
 // @ts-ignore
 import express from 'express';
+import cors from 'cors';
 import { expressjwt } from 'express-jwt'; // not-in-book: change to destructure of name.
 import { router as userRouter } from './user/index.js';
 import { router as loginRouter } from './auth.js';
@@ -14,6 +15,14 @@ import { registerHandler } from "./connect.js";
 const app = express();
 
 app.use(express.json());
+
+// Define the CORS options
+// https://mufazmi.medium.com/solving-cors-issues-in-your-node-js-application-836506e63871
+const corsOptions = {
+    credentials: false,
+    origin: ['*', 'http://localhost:8080'] // Whitelist the domains you want to allow
+};
+app.use(cors(corsOptions)); // https://blog.logrocket.com/using-axios-set-request-headers/
 
 app.use('/login', loginRouter);
 
