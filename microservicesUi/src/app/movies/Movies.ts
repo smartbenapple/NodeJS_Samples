@@ -1,6 +1,8 @@
+import { Injectable, InjectionToken } from '@angular/core';
 import axios from "axios";
 import { Events } from '../events/EventEmitter';
 import { getData } from "./getData";
+import { getByteLengths } from './utils'
 
 interface IMovie
 {
@@ -11,10 +13,13 @@ interface IMovie
 const url = 'https://gcloud-ms-api-axxh6chama-wl.a.run.app/movie'; // locally: http://localhost:8181/movie
 const url2 = 'https://gcloud-ms-get-axxh6chama-wl.a.run.app/get';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class MovieClass
 {
   movies = [{ "Title": "Bambi", "Year": "1956" }, { "Title": "Snow White", "Year": "1934" }];
-  logMessage:string = "...";
+  logMessages:[string] = ["..."];
 
   // Success: testing event.
   // https://www.w3schools.com/nodejs/nodejs_events.asp
@@ -22,17 +27,44 @@ export class MovieClass
   EventGetAllCompleted = new Events();
 
   // Success: Test message callback
-  _postMsgCallback: (msg:string) => void;
+  _postMsgCallback: ((msg: string) => void) = () => { console.log("") };
   // TODO: test catching error axios
   private err: ((reason: any) => PromiseLike<never>) | undefined | null;
 
-  constructor(postMsgCallback: (msg:string) => void)
+  constructor()
+  //constructor(postMsgCallback:(msg:string) => void)
   {
-    this._postMsgCallback = postMsgCallback;
+    //this._postMsgCallback = postMsgCallback;
     this.movies = [{ "Title": "Mary Poppins", "Year": "1956" }, { "Title": "Dumbo", "Year": "1967" }];
 
     this.getAll();
   }
+
+  add(item: IMovie)
+  {
+    this._postMsgCallback("Ui:[Movies.add] Triggered.");
+
+    let itemStg = JSON.stringify(item);
+    const axiosConfig = { headers: {
+        Accept: "application/json",
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Headers' : 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE',
+        "Content-Type": "application/json;charset=UTF-8",
+        'Content-Length': getByteLengths(itemStg)
+      }};
+
+    // todo: CORS worked for url2 test.
+    axios.post(url, itemStg, axiosConfig).then( response =>
+      {
+        this._postMsgCallback("Ui:[Movies.add] axios-post response." + response.data);
+      }).catch(this.err)
+    {
+      this._postMsgCallback("Ui:[Movies.add] axios-post failed!" + this.err?.toString());
+    };
+
+  }
+
   getAll()
   {
     this._postMsgCallback("GetAll Triggered.");

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MovieClass } from '../Movies';
 import { Events } from '../../events/EventEmitter';
+import { MessagesService } from "../../messages/messages.service";
 
 @Component({
   selector: 'app-movies',
@@ -14,14 +15,14 @@ export class MovieListComponent
   // Movies
   movies = [{"Title":"Bambi", "Year":"1965"},{"Title":"Iron Man", "Year":"2008"}];
 
-  // Messages
-  messages = [""];
-
-  functionCallback = (msg:string) => this.postMessageOccurred(msg);
+  // Concern: Messaging Service
+  messageService:MessagesService = inject(MessagesService);
 
   constructor()
   {
-    const cMovie = new MovieClass(this.functionCallback);
+    // todo: testing injectable class.
+    const cMovie = inject(MovieClass); //new MovieClass(this.functionCallback);
+    cMovie.logMessages.push("Set by MovieList");
 
     // @ts-ignore
     const moviesArray :[{Title:string, Year:string}] = cMovie.movies;
@@ -34,44 +35,23 @@ export class MovieListComponent
 
   testEventsHere()
   {
-    const functionCallback = (msg:string) => this.postMessageOccurred("Test EventHere...");
+    //const functionCallback = (msg:string) => this.postMessageOccurred("Test EventHere...");
 
     // todo: test custom version
     const events = new Events();
-    events.on("MyEvent", functionCallback);
+    events.on("MyEvent", this.messageService.pushMessage);
     setTimeout(() => {
-      //this.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
+      this.messageService.pushMessage("SetTimeout triggered...  Calling Emit on Custom-Event.");
       events.emit("MyEvent");
     }, 2500);
   }
 
-  postMessageOccurred(message: string)
-  {
-    this.pushMessage(message ?? "Event Handled.");
-  }
-
   reloadMoviesOccurred(movieClass:MovieClass)
   {
-    //this.pushMessage("Reload Movies Occurred.");
+    this.messageService.pushMessage("Reload Movies Occurred.");
 
     const items = movieClass.movies;
     this.movies = items;
-    this.outputArray(items);
-  }
-
-  pushMessage(message:string)
-  {
-    this.messages.push(message);
-  }
-
-  outputArray(array:{Title:string,Year:string}[])
-  {
-    //this.pushMessage("OutputArray Triggered.");
-    // for() index value is not the direct array item -> https://www.microverse.org/blog/how-to-loop-through-the-array-of-json-objects-in-javascript
-    for (let index in array)
-    {
-      let movie = array[index];
-      this.pushMessage(movie.Title);
-    }
+    this.messageService.outputArray(items);
   }
 }

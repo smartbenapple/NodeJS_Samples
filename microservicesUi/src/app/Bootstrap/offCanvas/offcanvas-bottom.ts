@@ -1,6 +1,6 @@
 // NG:OffCanvas-Bottom
 // https://ng-bootstrap.github.io/#/components/offcanvas/examples
-import {Component, inject, Input, TemplateRef, ViewEncapsulation} from '@angular/core';
+import { Component, inject, Input, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({

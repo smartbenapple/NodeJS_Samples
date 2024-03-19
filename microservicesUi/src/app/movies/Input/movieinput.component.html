@@ -1,17 +1,26 @@
 <div class="container">
-  <form>
+  <form [formGroup]="moviesForm" (ngSubmit)="clickSave($event)">
     <div class="row">
-      <div class="col">
-        <input type="text" id="title" />
+      <div class="col-2" style="background-color: aliceblue">
         <label for="title" >Title:</label>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <input type="text" id="year" />
-        <label for="year">Year:</label>
+      <div class="col-6">
+        <input type="text" id="title"  formControlName="title" />
       </div>
     </div>
-    <button type="submit" (click)="clickSave()">Save</button>
+    <div class="row">
+      <div class="col-2" style="background-color: aliceblue">
+        <label for="year">Year:</label>
+      </div>
+      <div class="col-6">
+        <input type="text" id="year"  formControlName="year" />
+      </div>
+    </div>
+    <!-- (click) event does not fire-off for <form>. Use the (ngSubmit) event in <form> element. -->
+    <button type="submit" >Save</button>
   </form>
+  <!-- Concern: Display Messages in a bottom panel.  Use inject(MessagesService) to obtain singleton instance. -->
+  <app-messages></app-messages>
 </div>
+
+
