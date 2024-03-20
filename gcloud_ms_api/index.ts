@@ -20,7 +20,7 @@ app.use(express.json());
 // https://mufazmi.medium.com/solving-cors-issues-in-your-node-js-application-836506e63871
 const corsOptions = {
     credentials: false,
-    origin: ['*', 'http://localhost:8080'] // Whitelist the domains you want to allow
+    origin: ['*', 'http://localhost:8080','https://microservicesui-axxh6chama-wl.a.run.app','https://gcloud-innerconnect-axxh6chama-wl.a.run.app'] // Whitelist the domains you want to allow
 };
 app.use(cors(corsOptions)); // https://blog.logrocket.com/using-axios-set-request-headers/
 
