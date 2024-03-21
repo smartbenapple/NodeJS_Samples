@@ -1,6 +1,0 @@
-movie:
-    build:
-      context: movie
-    depends_on:
-      - 'mysql'
-    restart: on-failure
