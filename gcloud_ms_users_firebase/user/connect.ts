@@ -2,7 +2,7 @@ import http from 'http';
 import https from 'https';
 
 // dest: { destSrv: "MovieSrv", data:{...} }
-export function sendData(dest)
+export function sendData(dest: { toString: () => string; })
 {
     console.log('[connect.sendData] Start = ' + dest.toString());
     let itemStg = JSON.stringify(dest);

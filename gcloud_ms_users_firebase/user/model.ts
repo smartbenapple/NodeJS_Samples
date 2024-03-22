@@ -3,6 +3,7 @@ import Firestore from "@google-cloud/firestore";
 
 // create instance of connection
 const projectId = 'dauntless-bay-416001';
+// @ts-ignore
 const firestore = new Firestore({ projectId });
 const collectionName = "Users";
 
@@ -17,14 +18,14 @@ export async function getAll()
             const snapshot = await collRef.get();
 
             // Success: Output IDs
-            snapshot.forEach(doc =>
+            snapshot.forEach((doc: { id: string; }) =>
             {
                 console.log("[model_gfs.getAll] doc=" + doc.id);
             });
 
             // Success: Output data() sections - gives back the original documents.
-            const docDatas = snapshot.docs.map(d => d.data());
-            docDatas.forEach(doc =>
+            const docDatas = snapshot.docs.map((d: { data: () => any; }) => d.data());
+            docDatas.forEach((doc: { Title: any; }) =>
             {
                 console.log(doc.Title);
             });
@@ -33,6 +34,7 @@ export async function getAll()
         }
         catch(e)
         {
+            // @ts-ignore
             console.log("[model.getAll] Error Occurred..." + e.toString());
         }
     }
@@ -42,7 +44,7 @@ export async function getAll()
     }
 }
 
-export async function create(user)
+export async function create(user: { username: any; password: any; })
 {
     try
     {
@@ -63,6 +65,7 @@ export async function create(user)
         }
         catch(e)
         {
+            // @ts-ignore
             console.log("[model.create] Error Occurred..." + e.toString());
         }
     }

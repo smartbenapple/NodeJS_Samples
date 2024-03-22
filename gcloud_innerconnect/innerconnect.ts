@@ -3,6 +3,7 @@ import https from 'https';
 
 // Idea: holds {} object => { destSrv: "MovieSrv", data:{...} }
 //       dest: { host: "", port: "", path: "", data: {...} }
+// { id: uuid4(), role: 'user', cmd: 'getAll', destSrv:"UserSrv" }
 let queue: any[] = [];
 
 export function testResponse(request: { body: any; }, response: { send: (arg0: string) => void; })

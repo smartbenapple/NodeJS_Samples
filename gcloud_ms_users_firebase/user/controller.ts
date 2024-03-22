@@ -1,8 +1,8 @@
-import { create, getAll } from './model_org.js';
+import { create, getAll } from './model.js';
 import { sendData } from "./connect.js";
 
 // { destSrv: "MovieSrv", data:{...} }
-function createMessage(id, data)
+function createMessage(id: any, data: any)
 {
     return {
         id: id,
@@ -11,7 +11,7 @@ function createMessage(id, data)
     };
 }
 
-export async function processAction(request, response)
+export async function processAction(request: { body: any; }, response: any)
 {
     console.log('[controller.processAction] Start = ');
 
@@ -33,20 +33,19 @@ export async function processAction(request, response)
     }
 }
 
-async function getAllAction(request, response)// was: channel, id
+async function getAllAction(request: { body: any; }, response: any)// was: channel, id
 {
     const data = await getAll();
     let body = request.body;
     const message = createMessage(body.destSrv, data);
-    //send(message);
-    sendData(message); // Note: Not using response stream intentionally
+    //sendData(message); // Note: Updated to respond back to the users service.
+    response.json(message);
 }
 
-async function createAction(request, response)// was: channel, id
+async function createAction(request: { body: any; }, response: any)// was: channel, id
 {
     let body = request.body;
     const newData = await create(body.data);
-    const message = createMessage(body.id, newData);
-    //send(message);
-    sendData(message); // Note: Not using response stream intentionally
+    //sendData(message); // Note: Updated to respond back to the users service.
+    response.json(newData);
 }
