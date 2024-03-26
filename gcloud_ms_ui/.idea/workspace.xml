@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="Updates&#10;&#10;ben" />
+    <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="node_modules&#10;other missing files.&#10;&#10;ben" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +44,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20240318_0008",
+    "com.google.cloudcode.ide_session_index": "20240325_0000",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/microservicesUi",
     "node.js.detected.package.eslint": "true",
@@ -53,7 +53,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.Angular CLI Server.executor": "Run",
-    "ts.external.directory.path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/microservicesUi/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/gcloud_ms_ui/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -64,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms" />
     </key>
   </component>
-  <component name="RunManager" selected="Cloud Code: Cloud Run.Cloud Run: Deploy">
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Cloud Run: Deploy" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;benscharbach2014@gmail.com&quot;,&quot;projectId&quot;:&quot;dauntless-bay-416001&quot;,&quot;projectName&quot;:&quot;My First Project&quot;,&quot;projectNumber&quot;:705134399838}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
       <option name="allowRunningInParallel" value="false" />
       <option name="buildEnvironment" value="Google Cloud Build" />
@@ -116,7 +116,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.14808.24" />
+        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.15026.13" />
       </set>
     </attachedChunks>
   </component>
@@ -134,6 +134,7 @@
       <workItem from="1710523818157" duration="137000" />
       <workItem from="1710529730225" duration="12305000" />
       <workItem from="1710789290153" duration="22937000" />
+      <workItem from="1711426928957" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="movie updates&#10;&#10;ben">
       <option name="closed" value="true" />
@@ -191,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710827333859</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="node_modules&#10;other missing files.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1711427044492</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711427044492</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +251,7 @@
     <MESSAGE value="Add NavBar.&#10;Other updates in location of files.&#10;&#10;ben" />
     <MESSAGE value="Add MessagesService.&#10;Updates to use Messaging service panel.&#10;&#10;ben" />
     <MESSAGE value="Updates&#10;&#10;ben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates&#10;&#10;ben" />
+    <MESSAGE value="node_modules&#10;other missing files.&#10;&#10;ben" />
+    <option name="LAST_COMMIT_MESSAGE" value="node_modules&#10;other missing files.&#10;&#10;ben" />
   </component>
 </project>
