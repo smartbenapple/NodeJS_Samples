@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="Updates&#10;&#10;ben" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2df3KzlD6CNRG03bM0SkwOgWROs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "benscharbach2014@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "dauntless-bay-416001",
+    "ACTIVE_CLOUD_PROJECT_NAME": "My First Project",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "705134399838",
+    "Cloud Code: Cloud Run.Cloud Run: Deploy.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.google.cloudcode.ide_session_index": "20240318_0008",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/microservicesUi",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.Angular CLI Server.executor": "Run",
+    "ts.external.directory.path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/microservicesUi/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/movies/List" />
+      <recent name="$PROJECT_DIR$/src/app/movies/Input" />
+      <recent name="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cloud Code: Cloud Run.Cloud Run: Deploy">
+    <configuration name="Cloud Run: Deploy" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;benscharbach2014@gmail.com&quot;,&quot;projectId&quot;:&quot;dauntless-bay-416001&quot;,&quot;projectName&quot;:&quot;My First Project&quot;,&quot;projectNumber&quot;:705134399838}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="buildEnvironment" value="Google Cloud Build" />
+      <option name="buildpacksEnv" />
+      <option name="cloudSqlConnections">
+        <list />
+      </option>
+      <option name="concurrency" value="80" />
+      <option name="cpuAllocated" value="1" />
+      <option name="dockerBuildArgs" />
+      <option name="dockerTarget" value="" />
+      <option name="environmentVariables" />
+      <option name="imagePath" value="gcr.io/dauntless-bay-416001/microservicesui" />
+      <option name="loadingAvailableBuilders" value="false" />
+      <option name="managedAuthentication" value="ALLOW_UNAUTHENTICATED" />
+      <option name="managedRegion" value="us-west2" />
+      <option name="maxInstances" value="1000" />
+      <option name="memoryAllocated" value="GIB_1" />
+      <option name="platform" value="FULLY_MANAGED" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="serviceAccount" value="" />
+      <option name="serviceName" value="microservicesui" />
+      <option name="timeout" value="300" />
+      <option name="vpcConnector" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cloud Code: Cloud Run.Cloud Run: Deploy" />
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="npm.Angular CLI Server" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.14808.24" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="" />
+      <created>1710385245753</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710385245753</updated>
+      <workItem from="1710385246796" duration="2213000" />
+      <workItem from="1710387591409" duration="7332000" />
+      <workItem from="1710444117116" duration="17795000" />
+      <workItem from="1710523818157" duration="137000" />
+      <workItem from="1710529730225" duration="12305000" />
+      <workItem from="1710789290153" duration="22937000" />
+    </task>
+    <task id="LOCAL-00001" summary="movie updates&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710390455187</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710390455187</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add EventEmitter class&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710395200292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710395200292</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add bootstrap.&#10;Add bCont3Clms concern.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710536289009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710536289009</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Other bootstrap components for testing.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710550431625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710550431625</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add NavBar.&#10;Other updates in location of files.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710795252275</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795252275</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add MessagesService.&#10;Updates to use Messaging service panel.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710820041322</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710820041322</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updates&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1710827333859</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710827333859</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/messages/messages.service.js" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/popovers/popover-basic.js.map" />
+        <option value="$PROJECT_DIR$/src/app/messages/messages.component.js.map" />
+        <option value="$PROJECT_DIR$/src/app/messages/messages.service.js.map" />
+        <option value="$PROJECT_DIR$/src/app/app.component.js" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/progressbar/progressbar-basic.js.map" />
+        <option value="$PROJECT_DIR$/src/app/app.component.js.map" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/popovers/popover-basic.js" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/progressbar/progressbar-basic.js" />
+        <option value="$PROJECT_DIR$/src/app/messages/messages.component.js" />
+        <option value="$PROJECT_DIR$/src/app/app.module.js.map" />
+        <option value="$PROJECT_DIR$/src/app/app.module.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/bContClmParts/bContClmParts.js" />
+        <option value="$PROJECT_DIR$/src/main.js.map" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/offCanvas/offcanvas-bottom.js.map" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/bContClmParts/bContClmParts.js.map" />
+        <option value="$PROJECT_DIR$/src/app/Bootstrap/offCanvas/offcanvas-bottom.js" />
+        <option value="$PROJECT_DIR$/src/app/events/EventEmitter.js.map" />
+        <option value="$PROJECT_DIR$/src/app/events/EventEmitter.js" />
+        <option value="$PROJECT_DIR$/src/app/NavBar/navbar.component.js" />
+        <option value="$PROJECT_DIR$/src/app/NavBar/navbar.component.js.map" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="movie updates&#10;&#10;ben" />
+    <MESSAGE value="Add EventEmitter class&#10;&#10;ben" />
+    <MESSAGE value="Add bootstrap.&#10;Add bCont3Clms concern.&#10;&#10;ben" />
+    <MESSAGE value="Other bootstrap components for testing.&#10;&#10;ben" />
+    <MESSAGE value="Add NavBar.&#10;Other updates in location of files.&#10;&#10;ben" />
+    <MESSAGE value="Add MessagesService.&#10;Updates to use Messaging service panel.&#10;&#10;ben" />
+    <MESSAGE value="Updates&#10;&#10;ben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates&#10;&#10;ben" />
+  </component>
+</project>
