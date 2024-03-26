@@ -1,0 +1,19 @@
+{
+  "name": "glcoud_ms_movies_firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.5.0",
+    "@types/cors": "^2.8.17",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
