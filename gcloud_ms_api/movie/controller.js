@@ -35,3 +35,4 @@ export function createAction(request, response) {
         }
     });
 }
+//# sourceMappingURL=controller.js.map

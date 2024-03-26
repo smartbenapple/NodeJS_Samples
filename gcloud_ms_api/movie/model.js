@@ -32,3 +32,4 @@ export function create(dataItem) {
 }
 //export function getAll() { return { id: uuid4(), role: 'user', cmd: 'getAll', destSrv:"MovieSrv" }; }
 //export function create(data:any) {return { id: uuid4(), role: 'user', cmd: 'getAll', destSrv:"MovieSrv", data:{} };};
+//# sourceMappingURL=model.js.map

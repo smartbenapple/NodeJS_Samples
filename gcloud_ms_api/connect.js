@@ -72,3 +72,4 @@ export function sendData(dest) {
     post_req.end();
     console.log('API:[connect.sendData] End = ' + itemStg);
 }
+//# sourceMappingURL=connect.js.map

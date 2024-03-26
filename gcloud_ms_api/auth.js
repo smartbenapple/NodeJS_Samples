@@ -35,3 +35,4 @@ router.post('/', (request, response) => __awaiter(void 0, void 0, void 0, functi
     }
 }));
 export { router };
+//# sourceMappingURL=auth.js.map

@@ -25,3 +25,4 @@ export function create(dataItem) {
         return message;
     });
 }
+//# sourceMappingURL=model.js.map

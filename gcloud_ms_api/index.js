@@ -34,3 +34,4 @@ app.use((err, request, response, next) => {
     }
 });
 app.listen(8080, () => console.log('API Gateway is listening'));
+//# sourceMappingURL=index.js.map

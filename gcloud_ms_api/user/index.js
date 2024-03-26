@@ -6,3 +6,4 @@ router.get('/', getAllAction);
 // @ts-ignore
 router.post('/', createAction);
 export { router };
+//# sourceMappingURL=index.js.map
