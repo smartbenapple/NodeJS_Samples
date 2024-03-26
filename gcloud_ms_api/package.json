@@ -2,6 +2,7 @@
   "name": "microservices_api",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "private": "true",
   "type": "module",
   "scripts": {
@@ -11,14 +12,12 @@
     "node": ">=11.14"
   },
   "dependencies": {
-    "amqplib": "^0.10.3",
-    "axios": "^1.6.8",
+    "axios": "^1.6.7",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
+    "express": "^4.17.1",
     "express-jwt": "^8.4.1",
     "handlebars": "^4.7.4",
     "jsonwebtoken": "^9.0.2",
-    "request": "^2.88.2",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
