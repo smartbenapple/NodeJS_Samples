@@ -7,7 +7,7 @@ export function sendData(dest) {
     let options = {
         hostname: "localhost",
         port: "8181",
-        path: "/useranswer",
+        path: "/usersAnswer",
         method: 'POST',
         headers: {
             'Access-Control-Allow-Origin': '*',
