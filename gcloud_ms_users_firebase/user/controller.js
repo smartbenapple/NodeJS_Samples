@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { create, getAll } from './model.js';
+import { sendData } from "./connect.js";
 // { destSrv: "MovieSrv", data:{...} }
 function createMessage(id, data) {
     return {
@@ -41,15 +42,15 @@ function getAllAction(request, response) {
         const data = yield getAll();
         let body = request.body;
         const message = createMessage(body.destSrv, data);
-        //sendData(message); // Note: Updated to respond back to the users service.
-        response.json(message);
+        sendData(message); // Send results back to innerconnect
+        response.json({ "message": "success" });
     });
 }
 function createAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
         let body = request.body;
         const newData = yield create(body.data);
-        //sendData(message); // Note: Updated to respond back to the users service.
-        response.json(newData);
+        // Note: Intentionally not returning the newData - not required.
+        response.json({ "message": "success" });
     });
 }

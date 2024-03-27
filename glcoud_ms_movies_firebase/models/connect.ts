@@ -9,8 +9,8 @@ export function sendData(dest: { toString: () => string; })
   // An object of options to indicate where to post to
   let options = {
     hostname: "localhost", // "gcloud-innerconnect-axxh6chama-wl.a.run.app
-    port: "8181", // send to interconnect; was=8282 locally; no ports on cloud
-    path: "/moviesAnswer", // /sendme
+    port: "8181", // send to interconnect; was=8181 locally; no ports on cloud
+    path: "/moviesAnswer",
     method: 'POST',
     headers: {
       'Access-Control-Allow-Origin' : '*',

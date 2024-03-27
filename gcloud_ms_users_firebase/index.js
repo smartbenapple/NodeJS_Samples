@@ -11,5 +11,5 @@ const corsOptions = {
 };
 app.use(cors(corsOptions)); // https://blog.logrocket.com/using-axios-set-request-headers/
 app.post('/users', processAction);
-// was port:8383
-app.listen(8080, () => console.log('User Service is listening'));
+// was port:8283
+app.listen(8283, () => console.log('User Service is listening'));

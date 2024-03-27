@@ -1,13 +1,13 @@
-import https from 'https';
+import http from 'http';
 // dest: { destSrv: "MovieSrv", data:{...} }
 export function sendData(dest) {
     console.log('[connect.sendData] Start = ' + dest.toString());
     let itemStg = JSON.stringify(dest);
     // An object of options to indicate where to post to
     let options = {
-        hostname: "gcloud-innerconnect-axxh6chama-wl.a.run.app",
-        port: "",
-        path: "/sendme",
+        hostname: "localhost",
+        port: "8181",
+        path: "/useranswer",
         method: 'POST',
         headers: {
             'Access-Control-Allow-Origin': '*',
@@ -17,7 +17,7 @@ export function sendData(dest) {
             'Content-Length': Buffer.byteLength(itemStg)
         }
     };
-    let post_req = https.request(options, function (res) {
+    let post_req = http.request(options, function (res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             console.log('Response: ' + chunk);

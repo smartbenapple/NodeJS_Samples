@@ -38,14 +38,14 @@ async function getAllAction(request: { body: any; }, response: any)// was: chann
     const data = await getAll();
     let body = request.body;
     const message = createMessage(body.destSrv, data);
-    //sendData(message); // Note: Updated to respond back to the users service.
-    response.json(message);
+    sendData(message); // Send results back to innerconnect
+    response.json({"message":"success"});
 }
 
 async function createAction(request: { body: any; }, response: any)// was: channel, id
 {
     let body = request.body;
     const newData = await create(body.data);
-    //sendData(message); // Note: Updated to respond back to the users service.
-    response.json(newData);
+    // Note: Intentionally not returning the newData - not required.
+    response.json({"message":"success"});
 }
