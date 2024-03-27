@@ -42,9 +42,9 @@ async function getAllAction(request: { body: any; }, response: any )
     let bodyStg = JSON.stringify(body);
     console.log("Movies:[controller:createAction] body=" + bodyStg);
     const message = createMessage(body.destSrv, movies);
-    //sendData(message); // Note: Updated to respond back to the movies service.
+    sendData(message); // Send results back to innerconnect
     console.log("Movies:[controller:getAllAction] message=" + JSON.stringify(message));
-    response.json(message);
+    response.json({"message":"success"}); // respond back to innerconnect.
   }
   catch(e)
   {
@@ -52,7 +52,7 @@ async function getAllAction(request: { body: any; }, response: any )
   }
 }
 
-async function createAction(request: { body: any; }, response: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: unknown): void; new(): any; }; }; })
+async function createAction(request: { body: any; }, response: any)
 {
   try
   {
@@ -61,9 +61,9 @@ async function createAction(request: { body: any; }, response: { status: (arg0: 
     console.log("Movies:[controller:createAction] body=" + bodyStg);
     const newData = await create(body.data);
     const message = createMessage(body.id, newData);
-    sendData(message); // Note: Not using response stream intentionally
+    //sendData(message); // Note: Not using response stream intentionally
     console.log("Movies:[controller:createAction] message=" + JSON.stringify(message));
-    //response.json(movie);
+    response.json({"message":"success"});
   }
   catch(e)
   {
