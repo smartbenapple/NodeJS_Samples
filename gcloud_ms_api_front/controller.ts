@@ -1,4 +1,4 @@
-import { register, sendData } from './connect.js';
+import {register, registerHandler, sendData} from './connect.js';
 
 export function getUsers(request: any, response: any)
 {
@@ -55,4 +55,14 @@ async function createAction(response: any, data: {"id":string, "data":any, "path
         response.status(500).json(e);
         console.log("API:[controller.createAction] Error.")
     }
+}
+
+export function sendMeUsers(request: any, response: any)
+{
+    registerHandler(request, response);
+}
+
+export function sendMeMovies(request: any, response: any)
+{
+    registerHandler(request, response);
 }

@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { getUsers, getMovies, createUsers, createMovies } from "./controller.js"
+import { getUsers, getMovies, createUsers, createMovies, sendMeUsers, sendMeMovies } from "./controller.js"
 
 const app = express();
 app.use(express.json());
@@ -19,5 +19,8 @@ app.get('/movies', getMovies);
 
 app.post('/users', createUsers); // not-in-book: add algorithms: ["HS256"]
 app.post('/movies', createMovies);
+
+app.post("/sendmeUsers", sendMeUsers);
+app.post("/sendmeMovies", sendMeMovies);
 
 app.listen(8080, () => console.log('API-Front Gateway is listening'));
