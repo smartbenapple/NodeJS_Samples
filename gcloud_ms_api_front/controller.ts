@@ -2,13 +2,13 @@ import { register, sendData } from './connect.js';
 
 export function getUsers(request: any, response: any)
 {
-    let data = {"id":"?","data":"0", "path":"/users"}
+    let data = {"id":"?","data":"0", "path":"/usersGet"}
     getAllAction(response, data);
 }
 
 export function getMovies(request: any, response: any)
 {
-    let data = {"id":"?","data":"0", "path":"/movies"}
+    let data = {"id":"?","data":"0", "path":"/moviesGet"}
     getAllAction(response, data);
 }
 
@@ -31,13 +31,13 @@ async function getAllAction(response: any, data: {"id":string, "data":any, "path
 
 export function createUsers(request: any, response: any)
 {
-    let data = {"id":"?","data":request.body, "path":"/users"}
+    let data = {"id":"?","data":request.body, "path":"/usersPost"}
     createAction(response, data);
 }
 
 export function createMovies(request: any, response: any)
 {
-    let data = {"id":"?","data":request.body, "path":"/movies"}
+    let data = {"id":"?","data":request.body, "path":"/moviesPost"}
     createAction(response, data);
 }
 

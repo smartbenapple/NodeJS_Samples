@@ -14,10 +14,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // TODO: Put back in later -> expressjwt( { secret: 'secret', algorithms: ["HS256"]} )
-app.get('/user', getUsers); // not-in-book: add algorithms: ["HS256"]
-app.get('/movie', getMovies);
+app.get('/users', getUsers); // not-in-book: add algorithms: ["HS256"]
+app.get('/movies', getMovies);
 
-app.post('/user', createUsers); // not-in-book: add algorithms: ["HS256"]
-app.post('/movie', createMovies);
+app.post('/users', createUsers); // not-in-book: add algorithms: ["HS256"]
+app.post('/movies', createMovies);
 
 app.listen(8080, () => console.log('API-Front Gateway is listening'));

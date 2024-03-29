@@ -1,3 +1,4 @@
+import http from "http";
 import https from "https";
 import {v4 as uuid4} from "uuid";
 
@@ -56,17 +57,16 @@ export function registerHandler(request: { body: any; }, response: any)
 }
 
 //       dest: { host: "", port: "", path: "", data: {...} }
-export function sendData(dest: { toString: () => string; })
+export function sendData(dest: {"id":string, "data":any, "path":string})
 {
-    console.log('API:[connect.sendData] Start = ' + dest.toString());
-
-    //let item = { Title:"Yesterday", Song:"River" };
     let itemStg = JSON.stringify(dest);
+    console.log('API:[connect.sendData] Start = ' + itemStg);
+
     // An object of options to indicate where to post to
     let options = {
-        hostname: "localhost", // gcloud-innerconnect-axxh6chama-wl.a.run.app
-        port: "8084", // Send to interconnect; was:8084 locally; no ports for cloud.
-        path: "/sendme",
+        hostname: "localhost", // ???: todo - get the gcloud url for api.
+        port: "8084", // Send to api; was:8084 locally; no ports for cloud.
+        path: dest.path,
         method: 'POST',
         headers: {
             'Access-Control-Allow-Origin' : '*',
@@ -77,7 +77,7 @@ export function sendData(dest: { toString: () => string; })
         }
     };
 
-    let post_req = https.request(options, function(res) {
+    let post_req = http.request(options, function(res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             console.log('Response: ' + chunk);
