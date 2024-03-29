@@ -37,7 +37,7 @@ async function getAllAction(request: { body: any; }, response: any)// was: chann
 {
     const data = await getAll();
     let body = request.body;
-    const message = createMessage(body.destSrv, data);
+    const message = createMessage(body.id, data); // todo: id wrong
     sendData(message); // Send results back to innerconnect
     response.json({"message":"success"});
 }

@@ -41,7 +41,7 @@ function getAllAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
         const data = yield getAll();
         let body = request.body;
-        const message = createMessage(body.destSrv, data);
+        const message = createMessage(body.id, data); // todo: id wrong
         sendData(message); // Send results back to innerconnect
         response.json({ "message": "success" });
     });
