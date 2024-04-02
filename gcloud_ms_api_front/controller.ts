@@ -8,7 +8,7 @@ export function getUsers(request: any, response: any)
 
 export function getMovies(request: any, response: any)
 {
-    let data = {"id":"?","data":"0", "path":"/moviesGet"}
+    let data = {"id":"?","data":'{"title":"0","year";"0"}', "path":"/moviesGet"}
     getAllAction(response, data);
 }
 
@@ -31,8 +31,10 @@ async function getAllAction(response: any, data: {"id":string, "path":string})
 
 export function createUsers(request: any, response: any)
 {
-    let data = {"id":"?","data":request.body, "path":"/usersPost"}
+    let newUser = request.body;
+    let data = {"id":"?","data":`{"username":"${newUser.username}","password":"${newUser.password}"}`, "path":"/usersPost"};
     createAction(response, data);
+    response.json({"message":"Success"});
 }
 
 export function createMovies(request: any, response: any)
