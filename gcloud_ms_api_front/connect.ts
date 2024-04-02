@@ -56,8 +56,42 @@ export function registerHandler(request: { body: any; }, response: any)
     console.log("API:[connect.registerHandler] id=" + body.id.toString());
 }
 
+export function sendData(dest: {"id":string, "path":string})
+{
+    let itemStg = JSON.stringify(dest);
+    console.log('API:[connect.sendData] Start = ' + itemStg);
+
+    // An object of options to indicate where to post to
+    let options = {
+        hostname: "localhost", // ???: todo - get the gcloud url for api.
+        port: "8084", // Send to api; was:8084 locally; no ports for cloud.
+        path: dest.path,
+        method: 'POST',
+        headers: {
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Headers' : 'Origin, X-Requested-With, Content-Type, Accept',
+            'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE',
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(itemStg)
+        }
+    };
+
+    let post_req = http.request(options, function(res) {
+        res.setEncoding('utf8');
+        res.on('data', function (chunk) {
+            console.log('Response: ' + chunk);
+        });
+    });
+
+    // post the data
+    post_req.write(itemStg);
+    post_req.end();
+
+    console.log('API:[connect.sendData] End = ' + itemStg);
+}
+
 //       dest: { host: "", port: "", path: "", data: {...} }
-export function sendData(dest: {"id":string, "data":any, "path":string})
+export function sendDataCreate(dest: {"id":string, "data":any, "path":string})
 {
     let itemStg = JSON.stringify(dest);
     console.log('API:[connect.sendData] Start = ' + itemStg);

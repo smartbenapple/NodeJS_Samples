@@ -1,8 +1,8 @@
-import {register, registerHandler, sendData} from './connect.js';
+import { register, registerHandler, sendData, sendDataCreate } from './connect.js';
 
 export function getUsers(request: any, response: any)
 {
-    let data = {"id":"?","data":"0", "path":"/usersGet"}
+    let data = {"id":"?","data":'{"username":"0","password":"0"}', "path":"/usersGet"}
     getAllAction(response, data);
 }
 
@@ -12,7 +12,7 @@ export function getMovies(request: any, response: any)
     getAllAction(response, data);
 }
 
-async function getAllAction(response: any, data: {"id":string, "data":any, "path":string})
+async function getAllAction(response: any, data: {"id":string, "path":string})
 {
     try
     {
@@ -49,7 +49,7 @@ async function createAction(response: any, data: {"id":string, "data":any, "path
         //response.json(newMovie);
 
         data.id = id;
-        sendData(data); // todo: send work to Java api
+        sendDataCreate(data); // todo: send work to Java api
 
     } catch (e) {
         response.status(500).json(e);
