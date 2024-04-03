@@ -5,7 +5,8 @@ import { processAction } from './user/controller.js';
 const app = express();
 app.use(express.json());
 
-// this service ->  https://gcloud-ms-users-firebase-axxh6chama-wl.a.run.app
+// gCloud ->  https://gcloud-ms-users-firebase-axxh6chama-wl.a.run.app
+// locally: 8283
 // Define the CORS options
 // https://mufazmi.medium.com/solving-cors-issues-in-your-node-js-application-836506e63871
 const corsOptions = {

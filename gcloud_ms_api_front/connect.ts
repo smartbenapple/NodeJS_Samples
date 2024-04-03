@@ -63,8 +63,8 @@ export function sendData(dest: {"id":string, "path":string})
 
     // An object of options to indicate where to post to
     let options = {
-        hostname: "localhost", // ???: todo - get the gcloud url for api.
-        port: "8084", // Send to api; was:8084 locally; no ports for cloud.
+        hostname: "gcloud-ms-api-axxh6chama-wl.a.run.app", // gcloud-ms-api-axxh6chama-wl.a.run.app
+        port: "", // was:8084 locally; no ports for cloud.
         path: dest.path,
         method: 'POST',
         headers: {
@@ -76,7 +76,7 @@ export function sendData(dest: {"id":string, "path":string})
         }
     };
 
-    let post_req = http.request(options, function(res) {
+    let post_req = https.request(options, function(res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             console.log('Response: ' + chunk);
@@ -98,8 +98,8 @@ export function sendDataCreate(dest: {"id":string, "data":any, "path":string})
 
     // An object of options to indicate where to post to
     let options = {
-        hostname: "localhost", // ???: todo - get the gcloud url for api.
-        port: "8084", // Send to api; was:8084 locally; no ports for cloud.
+        hostname: "gcloud-ms-api-axxh6chama-wl.a.run.app", // gcloud-ms-api-axxh6chama-wl.a.run.app
+        port: "", // was:8084 locally; no ports for cloud.
         path: dest.path,
         method: 'POST',
         headers: {
@@ -111,7 +111,7 @@ export function sendDataCreate(dest: {"id":string, "data":any, "path":string})
         }
     };
 
-    let post_req = http.request(options, function(res) {
+    let post_req = https.request(options, function(res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
             console.log('Response: ' + chunk);

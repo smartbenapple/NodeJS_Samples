@@ -2,7 +2,7 @@ import { register, registerHandler, sendData, sendDataCreate } from './connect.j
 
 export function getUsers(request: any, response: any)
 {
-    let data = {"id":"?","data":'{"username":"0","password":"0"}', "path":"/usersGet"}
+    let data = {"id":"?","data_username":"0","data_password":"0", "path":"/usersGet"}
     getAllAction(response, data);
 }
 

@@ -8,8 +8,8 @@ export function sendData(dest: { toString: () => string; })
   console.log('Movies:[connect.sendData] Start = ' + itemStg);
   // An object of options to indicate where to post to
   let options = {
-    hostname: "localhost", // "gcloud-innerconnect-axxh6chama-wl.a.run.app
-    port: "8181", // send to interconnect; was=8181 locally; no ports on cloud
+    hostname: "gcloud-innerconnect-axxh6chama-wl.a.run.app", // gcloud-innerconnect-axxh6chama-wl.a.run.app
+    port: "", // was=8181 locally; no ports on cloud
     path: "/moviesAnswer",
     method: 'POST',
     headers: {
@@ -21,7 +21,7 @@ export function sendData(dest: { toString: () => string; })
     }
   };
 
-  let post_req = http.request(options, function(res) {
+  let post_req = https.request(options, function(res) {
     res.setEncoding('utf8');
     res.on('data', function (chunk) {
       console.log('Response: ' + chunk);
