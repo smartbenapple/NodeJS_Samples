@@ -4,11 +4,12 @@ import https from 'https';
 // dest: { destSrv: "MovieSrv", data:{...} }
 export function sendData(dest: any)
 {
-    console.log('[connect.sendData] Start = ' + dest.toString());
+    console.log('[connect.sendData] Start');
+    console.log('[connect.sendData] url=https://gcloud-ms-innerconnect-axxh6chama-wl.a.run.app/usersAnswer');
     let itemStg = JSON.stringify(dest);
     // An object of options to indicate where to post to
     let options = {
-        hostname: "gcloud-innerconnect-axxh6chama-wl.a.run.app", // gcloud-innerconnect-axxh6chama-wl.a.run.app
+        hostname: "gcloud-ms-innerconnect-axxh6chama-wl.a.run.app", // gcloud-ms-innerconnect-axxh6chama-wl.a.run.app
         port: "", // was=8181 locally; no ports on cloud
         path: "/usersAnswer",
         method: 'POST',

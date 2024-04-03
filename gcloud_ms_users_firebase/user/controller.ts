@@ -13,7 +13,7 @@ function createMessage(id: any, data: any)
 
 export async function processAction(request: { body: any; }, response: any)
 {
-    console.log('[controller.processAction] Start = ');
+    console.log('[controller.processAction] Start');
 
     let body = request.body;
     switch (body.cmd)
@@ -35,6 +35,7 @@ export async function processAction(request: { body: any; }, response: any)
 
 async function getAllAction(request: { body: any; }, response: any)// was: channel, id
 {
+    console.log('[controller.getAllAction] Start');
     const data = await getAll();
     let body = request.body;
     const message = createMessage(body.id, data); // todo: id wrong
@@ -44,6 +45,7 @@ async function getAllAction(request: { body: any; }, response: any)// was: chann
 
 async function createAction(request: { body: any; }, response: any)// was: channel, id
 {
+    console.log('[controller.createAction] Start');
     let body = request.body;
     const newData = await create(body.data);
     // Note: Intentionally not returning the newData - not required.

@@ -19,7 +19,7 @@ function createMessage(id, data) {
 }
 export function processAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log('[controller.processAction] Start = ');
+        console.log('[controller.processAction] Start');
         let body = request.body;
         switch (body.cmd) {
             case 'getAll':
@@ -39,6 +39,7 @@ export function processAction(request, response) {
 }
 function getAllAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log('[controller.getAllAction] Start');
         const data = yield getAll();
         let body = request.body;
         const message = createMessage(body.id, data); // todo: id wrong
@@ -48,6 +49,7 @@ function getAllAction(request, response) {
 }
 function createAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log('[controller.createAction] Start');
         let body = request.body;
         const newData = yield create(body.data);
         // Note: Intentionally not returning the newData - not required.

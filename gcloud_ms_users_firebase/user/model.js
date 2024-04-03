@@ -17,52 +17,45 @@ const collectionName = "Users";
 // https://cloud.google.com/firestore/docs/query-data/get-data
 export function getAll() {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log("[model_gfs.getAll] Start");
         try {
-            try {
-                const collRef = firestore.collection(collectionName);
-                const snapshot = yield collRef.get();
-                // Success: Output IDs
-                snapshot.forEach((doc) => {
-                    console.log("[model_gfs.getAll] doc=" + doc.id);
-                });
-                // Success: Output data() sections - gives back the original documents.
-                const docDatas = snapshot.docs.map((d) => d.data());
-                docDatas.forEach((doc) => {
-                    console.log(doc.Title);
-                });
-                return docDatas;
-            }
-            catch (e) {
-                // @ts-ignore
-                console.log("[model.getAll] Error Occurred..." + e.toString());
-            }
+            const collRef = firestore.collection(collectionName);
+            const snapshot = yield collRef.get();
+            // Success: Output IDs
+            snapshot.forEach((doc) => {
+                console.log("[model_gfs.getAll] doc=" + doc.id);
+            });
+            // Success: Output data() sections - gives back the original documents.
+            const docDatas = snapshot.docs.map((d) => d.data());
+            docDatas.forEach((doc) => {
+                console.log("[model_gfs.getAll] Title=" + doc.Title);
+            });
+            console.log("[model_gfs.getAll] End with records=" + docDatas.length.toString());
+            return docDatas;
         }
-        finally {
-            // ...
+        catch (e) {
+            // @ts-ignore
+            console.log("[model.getAll] Error Occurred..." + e.toString());
         }
     });
 }
 export function create(user) {
     return __awaiter(this, void 0, void 0, function* () {
+        console.log("[model_gfs.create] Start");
         try {
-            try {
-                const collRef = firestore.collection(collectionName);
-                // Create item
-                const addItem = { "username": user.username, "password": user.password };
-                // Auto-Generate ID -> Just use the Doc() call.
-                // https://cloud.google.com/firestore/docs/manage-data/add-data
-                const newAddRef = collRef.doc();
-                // Add Item
-                const result = yield newAddRef.set(addItem);
-                console.log(`User ${result.writeTime} created successfully.`);
-            }
-            catch (e) {
-                // @ts-ignore
-                console.log("[model.create] Error Occurred..." + e.toString());
-            }
+            const collRef = firestore.collection(collectionName);
+            // Create item
+            const addItem = { "username": user.username, "password": user.password };
+            // Auto-Generate ID -> Just use the Doc() call.
+            // https://cloud.google.com/firestore/docs/manage-data/add-data
+            const newAddRef = collRef.doc();
+            // Add Item
+            const result = yield newAddRef.set(addItem);
+            console.log(`[model_gfs.create] User ${result.writeTime} created successfully.`);
         }
-        finally {
-            // ...
+        catch (e) {
+            // @ts-ignore
+            console.log("[model.create] Error Occurred..." + e.toString());
         }
     });
 }
