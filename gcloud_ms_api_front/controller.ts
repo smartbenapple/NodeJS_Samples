@@ -39,8 +39,10 @@ export function createUsers(request: any, response: any)
 
 export function createMovies(request: any, response: any)
 {
-    let data = {"id":"?","data":request.body, "path":"/moviesPost"}
+    let newMovie = request.body;
+    let data = {"id":"?","data":`{"title":"${newMovie.title}","year":"${newMovie.year}"}`, "path":"/moviesPost"};
     createAction(response, data);
+    response.json({"message":"Success"});
 }
 
 async function createAction(response: any, data: {"id":string, "data":any, "path":string}) {
