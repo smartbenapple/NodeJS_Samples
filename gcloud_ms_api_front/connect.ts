@@ -91,7 +91,7 @@ export function sendData(dest: {"id":string, "path":string})
 }
 
 //       dest: { host: "", port: "", path: "", data: {...} }
-export function sendDataCreate(dest: {"id":string, "data":any, "path":string})
+export function sendDataCreate(dest: any)
 {
     let itemStg = JSON.stringify(dest);
     console.log('API:[connect.sendData] Start = ' + itemStg);
