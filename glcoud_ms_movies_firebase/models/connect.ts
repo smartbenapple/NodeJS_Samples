@@ -8,7 +8,7 @@ export function sendData(dest: { toString: () => string; })
   console.log('Movies:[connect.sendData] Start = ' + itemStg);
   // An object of options to indicate where to post to
   let options = {
-    hostname: "gcloud-innerconnect-axxh6chama-wl.a.run.app", // gcloud-innerconnect-axxh6chama-wl.a.run.app
+    hostname: "gcloud-ms-innerconnect-axxh6chama-wl.a.run.app", // gcloud-ms-innerconnect-axxh6chama-wl.a.run.app
     port: "", // was=8181 locally; no ports on cloud
     path: "/moviesAnswer",
     method: 'POST',
