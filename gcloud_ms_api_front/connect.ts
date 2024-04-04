@@ -9,7 +9,7 @@ export function register(response: any)// not-in-book: param is message, not id.
     let id = uuid4();
     registry['id'] = response; // not-in-book: Add {} wrapper with type
 
-    console.log(`API_f:[connect.register] Stored 'Response' successfully for id=${id}.`);
+    console.log(`API_F:[connect.register] Stored 'Response' successfully for id=${id}.`);
 
     return id;
 }
@@ -20,7 +20,7 @@ export function registerId(id: any, response: any)// not-in-book: param is messa
     //registry['type'] = 'function'; // not-in-book
     registry['id'] = response; // not-in-book: Add {} wrapper with type
 
-    console.log(`API_f:[connect.register] Stored 'Response' successfully for id=${id}.`);
+    console.log(`API_F:[connect.register] Stored 'Response' successfully for id=${id}.`);
 }
 
 export function answer(id: string | number, data: any)
@@ -35,14 +35,14 @@ export function answer(id: string | number, data: any)
         //register[id](data);
         // @ts-ignore
         regItem(data); // not-in-book
-        console.log(`API:[connect.answer] Triggering function callback for id=${id}.`);
+        console.log(`API_F:[connect.answer] Triggering function callback for id=${id}.`);
     }
     else
     {
         // @ts-ignore
         regItem.send(data); // Assumption: regItem is 'response' object.
         //registry[id].send(data);
-        console.log(`API:[connect.answer] Triggering send() for id=${id}.`);
+        console.log(`API_F:[connect.answer] Triggering send() for id=${id}.`);
     }
 
     // @ts-ignore
@@ -53,13 +53,13 @@ export function registerHandler(request: { body: any; }, response: any)
 {
     let body = request.body;
     answer(body.id, body.data); // Send answer back to original requesting browser
-    console.log("API:[connect.registerHandler] id=" + body.id.toString());
+    console.log("API_F:[connect.registerHandler] id=" + body.id.toString());
 }
 
 export function sendData(dest: {"id":string, "path":string})
 {
     let itemStg = JSON.stringify(dest);
-    console.log('API:[connect.sendData] Start = ' + itemStg);
+    console.log('API_F:[connect.sendData] Start = ' + itemStg);
 
     // An object of options to indicate where to post to
     let options = {
@@ -87,14 +87,14 @@ export function sendData(dest: {"id":string, "path":string})
     post_req.write(itemStg);
     post_req.end();
 
-    console.log('API:[connect.sendData] End = ' + itemStg);
+    console.log('API_F:[connect.sendData] End = ' + itemStg);
 }
 
 //       dest: { host: "", port: "", path: "", data: {...} }
 export function sendDataCreate(dest: any)
 {
     let itemStg = JSON.stringify(dest);
-    console.log('API:[connect.sendData] Start = ' + itemStg);
+    console.log('API_F:[connect.sendDataCreate] Start = ' + itemStg);
 
     // An object of options to indicate where to post to
     let options = {
@@ -122,5 +122,5 @@ export function sendDataCreate(dest: any)
     post_req.write(itemStg);
     post_req.end();
 
-    console.log('API:[connect.sendData] End = ' + itemStg);
+    console.log('API_F:[connect.sendDataCreate] End = ' + itemStg);
 }

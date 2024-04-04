@@ -32,7 +32,7 @@ async function getAllAction(response: any, data: {"id":string, "path":string})
 export function createUsers(request: any, response: any)
 {
     let newUser = request.body;
-    let data = {"id":"?","data_username":`"${newUser.username}"`,"data_password":`"${newUser.password}"`, "path":"/usersPost"};
+    let data = {"id":"?","data_username":`${newUser.username}`,"data_password":`${newUser.password}`, "path":"/usersPost"};
     createAction(response, data);
     response.json({"message":"Success"});
 }
@@ -40,7 +40,7 @@ export function createUsers(request: any, response: any)
 export function createMovies(request: any, response: any)
 {
     let newMovie = request.body;
-    let data = {"id":"?","data_title":`"${newMovie.title}"`,"data_year":`"${newMovie.year}"`,"path":"/moviesPost"};
+    let data = {"id":"?","data_title":`${newMovie.title}`,"data_year":`${newMovie.year}`,"path":"/moviesPost"};
     createAction2(response, data);
     response.json({"message":"Success"});
 }
@@ -57,7 +57,7 @@ async function createAction(response: any, data: {"id":string, "data_username":s
 
     } catch (e) {
         response.status(500).json(e);
-        console.log("API:[controller.createAction] Error.")
+        console.log("API_F:[controller.createAction] Error.")
     }
 }
 
@@ -73,7 +73,7 @@ async function createAction2(response: any, data: {"id":string, "data_title":str
 
     } catch (e) {
         response.status(500).json(e);
-        console.log("API:[controller.createAction] Error.")
+        console.log("API_F:[controller.createAction] Error.")
     }
 }
 
