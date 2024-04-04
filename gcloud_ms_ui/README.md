@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
+## Add JQuery to Angular
+
+- Install JQuery: `npm install jquery`
+- Install @types/jquery: `npm i --save-dev @types/jquery`
+- Add JQuery script ref to angular.json, to Script[] block: `src="node_modules/jquery/dist/jquery.min.js"`
+- Reference $ in TypeScript files: `import * as $ from 'jquery';`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

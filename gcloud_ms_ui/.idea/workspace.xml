@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="node_modules&#10;other missing files.&#10;&#10;ben">
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_get/.idea/gcloud_ms_get.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_get/.idea/gcloud_ms_get.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/.bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1-vsdoc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/17.2.3/vite/deps_temp_326e6aaf/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/messages/messages.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/messages/messages.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/messages/messages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/messages/messages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/getData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/getData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +54,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;smartbenapple&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/smartbenapple/NodeJS_Samples.git&quot;,
+    &quot;accountId&quot;: &quot;8ba452dc-ce16-4d89-b79a-1c5c7b59d086&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -46,20 +87,23 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.google.cloudcode.ide_session_index": "20240325_0002",
+    "com.google.cloudcode.ide_session_index": "20240404_0003",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/microservicesUi",
+    "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/gcloud_ms_ui/src/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "npm.Angular CLI Server.executor": "Run",
+    "npm.Angular CLI Server.executor": "Debug",
     "ts.external.directory.path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/gcloud_ms_ui/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/movies/List" />
       <recent name="$PROJECT_DIR$/src/app/movies/Input" />
@@ -118,7 +162,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-985749b364ce-JavaScript-WS-233.15026.13" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
       </set>
     </attachedChunks>
   </component>
@@ -138,6 +182,9 @@
       <workItem from="1710789290153" duration="22937000" />
       <workItem from="1711426928957" duration="146000" />
       <workItem from="1711427575484" duration="292000" />
+      <workItem from="1712259069036" duration="3786000" />
+      <workItem from="1712266931308" duration="342000" />
+      <workItem from="1712267282603" duration="3989000" />
     </task>
     <task id="LOCAL-00001" summary="movie updates&#10;&#10;ben">
       <option name="closed" value="true" />

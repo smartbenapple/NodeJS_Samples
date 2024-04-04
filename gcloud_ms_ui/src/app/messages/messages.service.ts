@@ -17,7 +17,7 @@ export class MessagesService
     this.messages.push(message);
   }
 
-  outputArray(array:{Title:string,Year:string}[])
+  outputArray(array: any)
   {
     //this.pushMessage("OutputArray Triggered.");
     // for() index value is not the direct array item -> https://www.microverse.org/blog/how-to-loop-through-the-array-of-json-objects-in-javascript

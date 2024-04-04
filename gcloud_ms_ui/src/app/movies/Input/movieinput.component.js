@@ -26,7 +26,7 @@ let MovieInputComponent = class MovieInputComponent {
         this.messagesService.pushMessage(message);
     }
     clickSave() {
-        let movie = { Title: this.moviesForm.value.title.toString(), Year: this.moviesForm.value.year.toString() };
+        let movie = { title: this.moviesForm.value.title.toString(), year: this.moviesForm.value.year.toString() };
         let movieStg = JSON.stringify(movie);
         this.pushMessage("UI:[movieinput.clickSave] Triggered. Movie=" + movieStg.toString());
         // todo: send test data for testing

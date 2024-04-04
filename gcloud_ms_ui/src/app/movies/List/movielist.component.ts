@@ -13,7 +13,8 @@ export class MovieListComponent
   title = 'My Movie List';
 
   // Movies
-  movies = [{"Title":"Bambi", "Year":"1965"},{"Title":"Iron Man", "Year":"2008"}];
+  // todo: why type is any?
+  movies: any = [{"title":"Bambi", "year":"1965"},{"title":"Iron Man", "year":"2008"}];
 
   // Concern: Messaging Service
   messageService:MessagesService = inject(MessagesService);
@@ -24,7 +25,7 @@ export class MovieListComponent
     const cMovie = inject(MoviesService);
 
     // @ts-ignore
-    const moviesArray :[{Title:string, Year:string}] = cMovie.movies;
+    const moviesArray :[{title:string, year:string}] = cMovie.movies;
     this.movies = moviesArray;
 
     // Tie to EventEmitter

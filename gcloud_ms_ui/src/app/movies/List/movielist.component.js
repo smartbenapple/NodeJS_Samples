@@ -7,7 +7,8 @@ let MovieListComponent = class MovieListComponent {
     constructor() {
         this.title = 'My Movie List';
         // Movies
-        this.movies = [{ "Title": "Bambi", "Year": "1965" }, { "Title": "Iron Man", "Year": "2008" }];
+        // todo: why type is unknown?
+        this.movies = [{ "title": "Bambi", "year": "1965" }, { "title": "Iron Man", "year": "2008" }];
         // Concern: Messaging Service
         this.messageService = inject(MessagesService);
         // Success: testing injectable class.

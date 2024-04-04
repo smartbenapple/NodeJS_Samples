@@ -7,12 +7,12 @@ import {Component, inject, Input} from '@angular/core';
 })
 export class BootContainer3ClmsComponent
 {
-  Array:{"Title":string, "Year":string}[] = [];
+  Array:{"title":string, "year":string}[] = [];
   RowThree:string = "I'm Row#3";
 
   // https://angular.io/guide/component-interaction
   @Input()
-  set pArray(array: {"Title":string, "Year":string}[])
+  set pArray(array: {"title":string, "year":string}[])
   {
     this.Array = array;
   }

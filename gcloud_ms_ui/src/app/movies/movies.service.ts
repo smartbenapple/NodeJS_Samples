@@ -1,24 +1,26 @@
 import { inject, Injectable} from '@angular/core';
 import axios from "axios";
 import { Events } from '../events/EventEmitter';
-import { getData } from "./getData";
+import { getData, GetMoviesAjax } from "./getData";
 import { MessagesService } from "../messages/messages.service";
+import * as $ from 'jquery';
 
 interface IMovie
 {
-  Title:string,
-  Year: string,
+  title:string,
+  year: string,
 }
 
-const url = 'https://gcloud-ms-api-axxh6chama-wl.a.run.app/movie'; // locally: http://localhost:8181/movie
-const url2 = 'https://gcloud-ms-get-axxh6chama-wl.a.run.app/get';
+const url = 'https://gcloud-ms-api-front-axxh6chama-wl.a.run.app/movies'; // locally: http://localhost:8181/movie
+//const url2 = 'https://gcloud-ms-get-axxh6chama-wl.a.run.app/get';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoviesService
 {
-  movies = [{ "Title": "Bambi", "Year": "1956" }, { "Title": "Snow White", "Year": "1934" }];
+  // todo: why use any?
+  movies: any = [{ "title": "Bambi", "year": "1956" }, { "title": "Snow White", "year": "1934" }];
 
   // Success: testing event.
   // https://www.w3schools.com/nodejs/nodejs_events.asp
@@ -72,6 +74,8 @@ export class MoviesService
   {
     this.messagesService.pushMessage("GetAll Triggered.");
 
+    this.getMovies();
+
     // Using setTimeout in Javascript: https://masteringjs.io/tutorials/node/sleep
     /*setTimeout(() => {
       console.log('This printed after about 1 second');
@@ -79,13 +83,13 @@ export class MoviesService
       this._postMsgCallback("Ui:[Movies.GetAll] setTimeout completed.");
     }, 3000);*/
 
-    const axiosConfig = { headers: {
+    /*const axiosConfig = { headers: {
     Accept: "application/json",
       'Access-Control-Allow-Origin' : '*',
       'Access-Control-Allow-Headers' : 'Origin, X-Requested-With, Content-Type, Accept',
       'Access-Control-Allow-Methods' : 'GET, POST, PUT, DELETE',
       "Content-Type": "application/json;charset=UTF-8",
-  }};
+  }};*/
 
     // Success: CORS worked for url2 test.
     /*axios.post(url2, {}, axiosConfig).then( response =>
@@ -97,7 +101,7 @@ export class MoviesService
     };*/
 
     // Success: CORS worked for url;url2 test.
-    axios.get(url2, axiosConfig).then( response =>
+    /*axios.get(url, axiosConfig).then( response =>
     {
       //this._postMsgCallback("Ui:[Movies.GetAll] axios-post response." + response.data.message);
       this.movies = response.data.message;
@@ -106,12 +110,7 @@ export class MoviesService
     }).catch(this.err)
     {
       this.messagesService.pushMessage("Ui:[Movies.GetAll] axios-post failed!" + this.err?.toString());
-    };
-
-    //getData();
-    //this.getData2();
-
-    //return [{"title":"testing", "year":"2024"}];
+    };*/
   }
 
   getData2()
@@ -131,7 +130,7 @@ export class MoviesService
       }),
     };
 
-    fetch(url2).then(
+    fetch(url).then(
       (response) => response.json()
     ).then(
       (data) => {
@@ -144,13 +143,55 @@ export class MoviesService
     });
   } // end
 
-  outputArray(array:{Title:string,Year:string}[])
+  getMovies()
+  {
+    this.getMoviesAjax().then( (movies) =>
+    {
+      this.movies = movies;
+      this.EventGetAllCompleted.emit(this.EventName);
+      this.outputArray(this.movies);
+    }).catch ((err) =>
+    {
+      console.log("UI:[movies.service.getMovies] Error=" + err);
+    });
+  }
+
+  async getMoviesAjax()
+  {
+    this.messagesService.pushMessage("UI:[movies.service.getMoviesAjax] Triggered.");
+    return await new Promise((acc, rej) =>
+    {
+      // Create URL
+      let url = "https://gcloud-ms-api-front-axxh6chama-wl.a.run.app/movies";
+
+      // Set $ for JQuery access in TypeScript => import * as $ from 'jquery';
+      // Ref: https://stackoverflow.com/questions/30623825/how-to-use-jquery-with-angular
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'json', // what you expect back from server
+        success: function (result) {
+          console.log("UI:[getData.GetMoviesAjax] Movies Count=" + result.length);
+          // trigger accept
+          acc(result);
+        },
+        error: function (error) {
+          console.log('UI:[getData.GetMoviesAjax] Server Error: Maybe Unreachable.' + error);
+          //UpdateServerMessage('UI:[getData.GetMoviesAjax] Server Error: Maybe Unreachable.', true);
+          // trigger reject.
+          rej(error);
+        }
+      }); // end $.ajax
+    }); // end Promise()
+  }
+
+  outputArray(array:{title:string,year:string}[])
   {
     //this._postMsgCallback("OutputArray Triggered.");
     for (let index in array)
     {
       let movie = array[index];
-      this.messagesService.pushMessage(movie.Title);
+      this.messagesService.pushMessage(movie.title);
     }
   }
 }
