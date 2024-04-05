@@ -13,7 +13,7 @@ function createMessage(id: any, data: any)
 
 export async function processAction(request: { body: any; }, response: any)
 {
-  console.log('Movies:[controller.processAction] Start = ');
+  console.log('MoviesFB:[controller.processAction] Start = ');
 
   let body = request.body;
   switch (body.cmd)
@@ -40,10 +40,11 @@ async function getAllAction(request: { body: any; }, response: any )
     const movies = await getAll();
     let body = request.body;
     let bodyStg = JSON.stringify(body);
-    console.log("Movies:[controller:createAction] body=" + bodyStg);
-    const message = createMessage(body.destSrv, movies);
+    console.log("MoviesFB:[controller:getAllAction] body=" + bodyStg);
+    const message = createMessage(body.id, movies);
+    console.log('MoviesFB:[controller.getAllAction] message sent=' + JSON.stringify(message));
     sendData(message); // Send results back to innerconnect
-    console.log("Movies:[controller:getAllAction] message=" + JSON.stringify(message));
+    console.log("MoviesFB:[controller:getAllAction] message=" + JSON.stringify(message));
     response.json({"message":"success"}); // respond back to innerconnect.
   }
   catch(e)
@@ -58,11 +59,11 @@ async function createAction(request: { body: any; }, response: any)
   {
     let body = request.body;
     let bodyStg = JSON.stringify(body);
-    console.log("Movies:[controller:createAction] body=" + bodyStg);
+    console.log("MoviesFB:[controller:createAction] body=" + bodyStg);
     const newData = await create(body.data);
     const message = createMessage(body.id, newData);
     //sendData(message); // Note: Not using response stream intentionally
-    console.log("Movies:[controller:createAction] message=" + JSON.stringify(message));
+    console.log("MoviesFB:[controller:createAction] message=" + JSON.stringify(message));
     response.json({"message":"success"});
   }
   catch(e)

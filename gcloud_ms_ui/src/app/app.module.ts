@@ -13,6 +13,7 @@ import { NgbdOffcanvasBottom } from "./Bootstrap/offCanvas/offcanvas-bottom";
 import {MovieInputComponent} from "./movies/Input/movieinput.component";
 import {NavBarComponent} from "./NavBar/navbar.component";
 import {MessagesComponent} from "./messages/messages.component";
+import {UserListComponent} from "./users/List/userlist.component";
 
 @NgModule({
   imports: [
@@ -20,8 +21,9 @@ import {MessagesComponent} from "./messages/messages.component";
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/list', pathMatch: 'full'},
-      {path: 'list', component: MovieListComponent},
-      {path: 'add', component: MovieInputComponent},
+      {path: 'mlist', component: MovieListComponent},
+      {path: 'madd', component: MovieInputComponent},
+      {path: 'ulist', component: UserListComponent},
     ]),
     NgbdPopoverBasic,
     NgbdProgressbarBasic,
@@ -32,6 +34,7 @@ import {MessagesComponent} from "./messages/messages.component";
   declarations: [
     AppComponent,
     MovieListComponent,
+    UserListComponent,
     MovieInputComponent,
     MessagesComponent,
     BootContainer3ClmsComponent,
@@ -42,7 +45,6 @@ import {MessagesComponent} from "./messages/messages.component";
   ]
 })
 export class AppModule { }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

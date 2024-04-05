@@ -13,7 +13,7 @@ function createMessage(id: any, data: any)
 
 export async function processAction(request: { body: any; }, response: any)
 {
-    console.log('[controller.processAction] Start');
+    console.log('UsersFb:[controller.processAction] Start');
 
     let body = request.body;
     switch (body.cmd)
@@ -35,17 +35,18 @@ export async function processAction(request: { body: any; }, response: any)
 
 async function getAllAction(request: { body: any; }, response: any)// was: channel, id
 {
-    console.log('[controller.getAllAction] Start');
-    const data = await getAll();
+    console.log('UsersFb:[controller.getAllAction] Start');
+    const users = await getAll();
     let body = request.body;
-    const message = createMessage(body.id, data); // todo: id wrong
+    const message = createMessage(body.id, users);
+    console.log('UsersFb:[controller.getAllAction] message sent=' + JSON.stringify(message));
     sendData(message); // Send results back to innerconnect
     response.json({"message":"success"});
 }
 
 async function createAction(request: { body: any; }, response: any)// was: channel, id
 {
-    console.log('[controller.createAction] Start');
+    console.log('UsersFb:[controller.createAction] Start');
     let body = request.body;
     const newData = await create(body.data);
     // Note: Intentionally not returning the newData - not required.

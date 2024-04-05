@@ -19,7 +19,7 @@ function createMessage(id, data) {
 }
 export function processAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log('[controller.processAction] Start');
+        console.log('UsersFb:[controller.processAction] Start');
         let body = request.body;
         switch (body.cmd) {
             case 'getAll':
@@ -39,17 +39,18 @@ export function processAction(request, response) {
 }
 function getAllAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log('[controller.getAllAction] Start');
-        const data = yield getAll();
+        console.log('UsersFb:[controller.getAllAction] Start');
+        const users = yield getAll();
         let body = request.body;
-        const message = createMessage(body.id, data); // todo: id wrong
+        const message = createMessage(body.id, users);
+        console.log('UsersFb:[controller.getAllAction] message sent=' + JSON.stringify(message));
         sendData(message); // Send results back to innerconnect
         response.json({ "message": "success" });
     });
 }
 function createAction(request, response) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log('[controller.createAction] Start');
+        console.log('UsersFb:[controller.createAction] Start');
         let body = request.body;
         const newData = yield create(body.data);
         // Note: Intentionally not returning the newData - not required.

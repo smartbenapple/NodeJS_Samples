@@ -40,8 +40,7 @@ export class MoviesService
   {
     //this._postMsgCallback = postMsgCallback;
     this.movies = [{ "Title": "Mary Poppins", "Year": "1956" }, { "Title": "Dumbo", "Year": "1967" }];
-
-    this.getAll();
+    this.getMovies();
   }
 
   // TODO: Test if adds record.
@@ -73,8 +72,6 @@ export class MoviesService
   getAll()
   {
     this.messagesService.pushMessage("GetAll Triggered.");
-
-    this.getMovies();
 
     // Using setTimeout in Javascript: https://masteringjs.io/tutorials/node/sleep
     /*setTimeout(() => {
@@ -170,6 +167,7 @@ export class MoviesService
         url: url,
         type: "GET",
         dataType: 'json', // what you expect back from server
+        crossDomain: true, // todo: test
         success: function (result) {
           console.log("UI:[getData.GetMoviesAjax] Movies Count=" + result.length);
           // trigger accept

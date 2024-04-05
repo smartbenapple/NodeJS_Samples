@@ -14,9 +14,12 @@ export class NavBarComponent
 {
   active = 1;
 
+  // Note: The path:"/[name]" ties to the app.module.ts RouterModule.forRoot() section.
+  //       The router module includes array entries to point to angular components.
   links = [
-    { title: 'Add', fragment: '#', path:"/add" },
-    { title: 'Movies', fragment: '#', path:"/list" }
+    { title: 'Add', fragment: '#', path:"/madd" },
+    { title: 'Movies', fragment: '#', path:"/mlist" },
+    { title: 'Users', fragment: '#', path:"/ulist" }
   ];
 
   constructor(public route: ActivatedRoute)

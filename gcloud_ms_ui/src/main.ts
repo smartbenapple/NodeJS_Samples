@@ -1,5 +1,5 @@
 /// <reference types="@angular/localize" />
-
+// gCloud: https://microservicesui-axxh6chama-wl.a.run.app
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppModule } from './app/app.module';

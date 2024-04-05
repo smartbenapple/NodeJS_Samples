@@ -25,7 +25,7 @@ export function registerId(id: any, response: any)// not-in-book: param is messa
 
 export function answer(id: string | number, data: any)
 {
-    console.log(`API:[connect.answer] Start answering call for id=${id}.`);
+    console.log(`API_F:[connect.answer] Start answering call for id=${id}.`);
     // Issue: The javascript was not correctly detecting the 'function' typeof.
     let typeOfObject = typeof registry['id'];
     let regItem = registry['id']; // not-in-book
@@ -52,8 +52,11 @@ export function answer(id: string | number, data: any)
 export function registerHandler(request: { body: any; }, response: any)
 {
     let body = request.body;
-    answer(body.id, body.data); // Send answer back to original requesting browser
-    console.log("API_F:[connect.registerHandler] id=" + body.id.toString());
+    console.log("API_F:[connect.registerhandler] body=" + JSON.stringify(body));
+    let data = body.data; // extract the array
+    console.log("API_F:[connect.registerhandler] data=" + JSON.stringify(data));
+    answer(body.id, data); // Send answer back to original requesting browser
+    console.log("API_F:[connect.registerHandler] Answering Browser id=" + body.id.toString());
 }
 
 export function sendData(dest: {"id":string, "path":string})

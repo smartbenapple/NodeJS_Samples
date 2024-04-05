@@ -1,8 +1,8 @@
 import https from 'https';
 // dest: { destSrv: "MovieSrv", data:{...} }
 export function sendData(dest) {
-    console.log('[connect.sendData] Start');
-    console.log('[connect.sendData] url=https://gcloud-ms-innerconnect-axxh6chama-wl.a.run.app/usersAnswer');
+    console.log('UsersFb:[connect.sendData] Start');
+    console.log('UsersFb:[connect.sendData] url=https://gcloud-ms-innerconnect-axxh6chama-wl.a.run.app/usersAnswer');
     let itemStg = JSON.stringify(dest);
     // An object of options to indicate where to post to
     let options = {
@@ -21,11 +21,11 @@ export function sendData(dest) {
     let post_req = https.request(options, function (res) {
         res.setEncoding('utf8');
         res.on('data', function (chunk) {
-            console.log('Response: ' + chunk);
+            console.log('UsersFb:[connect.sendData] Response: ' + chunk);
         });
     });
     // post the data
     post_req.write(itemStg);
     post_req.end();
-    console.log('[connect.sendData] End = ' + itemStg);
+    console.log('UsersFb:[connect.sendData] End = ' + itemStg);
 }

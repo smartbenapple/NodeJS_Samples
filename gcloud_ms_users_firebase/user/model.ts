@@ -10,7 +10,7 @@ const collectionName = "Users";
 // https://cloud.google.com/firestore/docs/query-data/get-data
 export async function getAll()
 {
-    console.log("[model_gfs.getAll] Start");
+    console.log("UsersFb:[model_gfs.getAll] Start");
     try
     {
         const collRef = firestore.collection(collectionName);
@@ -19,29 +19,29 @@ export async function getAll()
         // Success: Output IDs
         snapshot.forEach((doc: { id: string; }) =>
         {
-            console.log("[model_gfs.getAll] doc=" + doc.id);
+            console.log("UsersFb:[model_gfs.getAll] doc=" + doc.id);
         });
 
         // Success: Output data() sections - gives back the original documents.
         const docDatas = snapshot.docs.map((d: { data: () => any; }) => d.data());
-        docDatas.forEach((doc: { Title: any; }) =>
+        docDatas.forEach((doc: { username: any; }) =>
         {
-            console.log("[model_gfs.getAll] Title=" +doc.Title);
+            console.log("UsersFb:[model_gfs.getAll] username=" +doc.username);
         });
 
-        console.log("[model_gfs.getAll] End with records=" + docDatas.length.toString());
+        console.log("UsersFb:[model_gfs.getAll] End with records=" + docDatas.length.toString());
         return docDatas;
     }
     catch(e)
     {
         // @ts-ignore
-        console.log("[model.getAll] Error Occurred..." + e.toString());
+        console.log("UsersFb:[model.getAll] Error Occurred..." + e.toString());
     }
 }
 
 export async function create(user: { username: any; password: any; })
 {
-    console.log("[model_gfs.create] Start");
+    console.log("UsersFb:[model_gfs.create] Start");
     try
     {
         const collRef = firestore.collection(collectionName);
@@ -55,11 +55,11 @@ export async function create(user: { username: any; password: any; })
         // Add Item
         const result = await newAddRef.set(addItem);
 
-        console.log(`[model_gfs.create] User ${result.writeTime} created successfully.`);
+        console.log(`UsersFb:[model_gfs.create] User ${result.writeTime} created successfully.`);
     }
     catch(e)
     {
         // @ts-ignore
-        console.log("[model.create] Error Occurred..." + e.toString());
+        console.log("UsersFb:[model.create] Error Occurred..." + e.toString());
     }
 }

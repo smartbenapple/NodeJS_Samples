@@ -4,37 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="node_modules&#10;other missing files.&#10;&#10;ben">
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/.bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1-vsdoc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist-1.7.1/jquery-1.7.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/jquery/dist/jquery.min.map" afterDir="false" />
+    <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="Updates to add JQuery.&#10;Use to load movies $.ajax call.&#10;&#10;ben">
+      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_api_front/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_api_front/connect.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/17.2.3/vite/deps_temp_326e6aaf/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms/bCont3Clms.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/messages/messages.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/messages/messages.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/messages/messages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/messages/messages.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/Input/movieinput.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/List/movielist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/List/movielist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/getData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/getData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/NavBar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/NavBar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/connect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/model_gfs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/model_gfs.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +174,7 @@
       <workItem from="1711427575484" duration="292000" />
       <workItem from="1712259069036" duration="3786000" />
       <workItem from="1712266931308" duration="342000" />
-      <workItem from="1712267282603" duration="3989000" />
+      <workItem from="1712267282603" duration="7327000" />
     </task>
     <task id="LOCAL-00001" summary="movie updates&#10;&#10;ben">
       <option name="closed" value="true" />
@@ -250,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711427044492</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updates to add JQuery.&#10;Use to load movies $.ajax call.&#10;&#10;ben">
+      <option name="closed" value="true" />
+      <created>1712271626769</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712271626769</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +300,7 @@
     <MESSAGE value="Add MessagesService.&#10;Updates to use Messaging service panel.&#10;&#10;ben" />
     <MESSAGE value="Updates&#10;&#10;ben" />
     <MESSAGE value="node_modules&#10;other missing files.&#10;&#10;ben" />
-    <option name="LAST_COMMIT_MESSAGE" value="node_modules&#10;other missing files.&#10;&#10;ben" />
+    <MESSAGE value="Updates to add JQuery.&#10;Use to load movies $.ajax call.&#10;&#10;ben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to add JQuery.&#10;Use to load movies $.ajax call.&#10;&#10;ben" />
   </component>
 </project>

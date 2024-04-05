@@ -5,7 +5,7 @@ import https from 'https';
 export function sendData(dest: { toString: () => string; })
 {
   let itemStg = JSON.stringify(dest);
-  console.log('Movies:[connect.sendData] Start = ' + itemStg);
+  console.log('MoviesFb:[connect.sendData] Start = ' + itemStg);
   // An object of options to indicate where to post to
   let options = {
     hostname: "gcloud-ms-innerconnect-axxh6chama-wl.a.run.app", // gcloud-ms-innerconnect-axxh6chama-wl.a.run.app
@@ -32,5 +32,5 @@ export function sendData(dest: { toString: () => string; })
   post_req.write(itemStg);
   post_req.end();
 
-  console.log('Movies:[connect.sendData] End = ' + itemStg);
+  console.log('MoviesFb:[connect.sendData] End = ' + itemStg);
 }
