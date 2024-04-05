@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c0b5c47-87f0-4104-b9d5-3bdfb455e9c3" name="Changes" comment="Updates to add JQuery.&#10;Use to load movies $.ajax call.&#10;&#10;ben">
-      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/users/users.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_api_front/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_api_front/connect.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3ClmsUser/bCont3ClmsUser.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3ClmsUser/bCont3ClmsUser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/Bootstrap/bCont3ClmsUser/bCont3ClmsUser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/17.2.3/microservicesUi/.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/NavBar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/NavBar/navbar.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/movies/movies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/movies/movies.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/connect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gcloud_ms_users_firebase/user/model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/connect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/connect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/model_gfs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../glcoud_ms_movies_firebase/models/model_gfs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/users/List/userlist.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/users/List/userlist.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.google.cloudcode.ide_session_index": "20240404_0003",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/gcloud_ms_ui/src/js",
+    "last_opened_file_path": "/Users/smartbenapple/Downloads/temp/NodeJS_Samples/gcloud_ms_ui/src/app/Bootstrap/bCont3ClmsUser",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +79,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/Bootstrap/bCont3ClmsUser" />
+      <recent name="$PROJECT_DIR$/src/app/Bootstrap" />
       <recent name="$PROJECT_DIR$/src/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +89,7 @@
       <recent name="$PROJECT_DIR$/src/app/Bootstrap/bCont3Clms" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="Cloud Code: Cloud Run.Cloud Run: Deploy">
     <configuration name="Cloud Run: Deploy" type="CloudCodeCloudRunConfigurationType" factoryName="CloudCodeCloudDeployRunConfigurationFactory" show_console_on_std_err="false" show_console_on_std_out="false" gcpProject="{&quot;googleUsername&quot;:&quot;benscharbach2014@gmail.com&quot;,&quot;projectId&quot;:&quot;dauntless-bay-416001&quot;,&quot;projectName&quot;:&quot;My First Project&quot;,&quot;projectNumber&quot;:705134399838}" imageBuilder="{&quot;name&quot;:&quot;Docker&quot;,&quot;payload&quot;:{&quot;path&quot;:&quot;Dockerfile&quot;}}" gcbSettings="{}">
       <option name="allowRunningInParallel" value="false" />
       <option name="buildEnvironment" value="Google Cloud Build" />
@@ -174,7 +163,7 @@
       <workItem from="1711427575484" duration="292000" />
       <workItem from="1712259069036" duration="3786000" />
       <workItem from="1712266931308" duration="342000" />
-      <workItem from="1712267282603" duration="7327000" />
+      <workItem from="1712267282603" duration="8284000" />
     </task>
     <task id="LOCAL-00001" summary="movie updates&#10;&#10;ben">
       <option name="closed" value="true" />

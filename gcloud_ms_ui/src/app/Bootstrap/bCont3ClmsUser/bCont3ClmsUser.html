@@ -1,0 +1,17 @@
+<!-- text-center -->
+<div class="container">
+  <div *ngFor="let user of Array" >
+<!-- align-items-start -->
+  <div class="row justify-content-evenly">
+      <div class="col-4">
+          <!-- Empty -->
+      </div>
+      <div class="col-3">
+        {{ user.username }}
+      </div>
+      <div class="col-5">
+        {{ user.password }}
+      </div>
+    </div>
+  </div>
+</div>

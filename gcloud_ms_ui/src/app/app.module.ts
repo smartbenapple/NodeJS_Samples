@@ -14,6 +14,7 @@ import {MovieInputComponent} from "./movies/Input/movieinput.component";
 import {NavBarComponent} from "./NavBar/navbar.component";
 import {MessagesComponent} from "./messages/messages.component";
 import {UserListComponent} from "./users/List/userlist.component";
+import {BootCtr3ClmsUserComp} from "./Bootstrap/bCont3ClmsUser/bCont3ClmsUser";
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import {UserListComponent} from "./users/List/userlist.component";
     MessagesComponent,
     BootContainer3ClmsComponent,
     BootContainerClmPartsComponent,
+    BootCtr3ClmsUserComp
   ],
   bootstrap: [
     AppComponent
